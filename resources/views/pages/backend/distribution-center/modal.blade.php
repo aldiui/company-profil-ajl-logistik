@@ -11,18 +11,24 @@
                 <div class="modal-body">
                     <input type="hidden" id="id">
                     <div class="form-group mb-3">
+                        <label for="kode" class="form-label">Kode <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="kode" name="kode">
+                        <small class="invalid-feedback" id="errorkode"></small>
+                    </div>
+                    <div class="form-group mb-3">
                         <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>
                         <input type="text" class="form-control" id="nama" name="nama">
                         <small class="invalid-feedback" id="errornama"></small>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="jenis" class="form-label">Jenis <span class="text-danger">*</span></label>
-                        <select name="jenis" id="jenis" class="form-control">
-                            <option value="">Pilih Jenis</option>
-                            <option value="Barang">Barang</option>
-                            <option value="Menu">Menu</option>
-                        </select>
-                        <small class="invalid-feedback" id="errorjenis"></small>
+                        <label for="alamat" class="form-label">Alamat <span class="text-danger">*</span></label>
+                        <textarea type="text" class="form-control" id="alamat" name="alamat"></textarea>
+                        <small class="invalid-feedback" id="erroralamat"></small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="telepon" class="form-label">Telepon <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="telepon" name="telepon">
+                        <small class="invalid-feedback" id="errortelepon"></small>
                     </div>
                 </div>
                 <div class="modal-footer">

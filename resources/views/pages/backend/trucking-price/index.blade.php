@@ -1,11 +1,11 @@
-@extends('layouts.admin')
+@extends('layouts.backend')
 
-@section('title', 'Kategori')
+@section('title', 'Distribution Center')
 
 @push('style')
-    <link rel="stylesheet" href="{{ asset('extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('compiled/css/table-datatable-jquery.css') }}">
-    <link rel="stylesheet" href="{{ asset('extensions/sweetalert2/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/compiled/css/table-datatable-jquery.css') }}">
+    <link rel="stylesheet" href="{{ asset('backend/extensions/sweetalert2/sweetalert2.min.css') }}">
 @endpush
 
 @section('main')
@@ -42,12 +42,17 @@
                             </div>
                             <hr>
                             <div class="table-responsive">
-                                <table class="table table-bordered table-striped" id="kategori-table" width="100%">
+                                <table class="table table-bordered table-striped" id="distribution-center-table"
+                                    width="100%">
                                     <thead>
                                         <tr>
                                             <th width="5%">#</th>
-                                            <th>Nama</th>
-                                            <th>Jenis</th>
+                                            <th>Rute</th>
+                                            <th>BLINDVAN</th>
+                                            <th>CDE BOX</th>
+                                            <th>CDD BOX</th>
+                                            <th>FUSOBOX</th>
+                                            <th>WINGBOX</th>
                                             <th width="15%">Aksi</th>
                                         </tr>
                                     </thead>
@@ -61,26 +66,34 @@
             </section>
         </div>
     </div>
-    @include('admin.kategori.create')
+    @include('pages.backend.distribution-center.modal')
 @endsection
 
 @push('scripts')
-    <script src="{{ asset('extensions/datatables.net/js/jquery.dataTables.min.js') }}"></script>
-    <script src="{{ asset('extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js') }}"></script>
-    <script src="{{ asset('extensions/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script src="{{ asset('backend/extensions/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('backend/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js') }}"></script>
+    <script src="{{ asset('backend/extensions/sweetalert2/sweetalert2.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            datatableCall('kategori-table', '{{ route('admin.kategori.index') }}', [{
+            datatableCall('distribution-center-table', '{{ route('admin.distribution-center.index') }}', [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex'
+                },
+                {
+                    data: 'kode',
+                    name: 'kode'
                 },
                 {
                     data: 'nama',
                     name: 'nama'
                 },
                 {
-                    data: 'jenis',
-                    name: 'jenis'
+                    data: 'alamat',
+                    name: 'alamat'
+                },
+                {
+                    data: 'telepon',
+                    name: 'telepon'
                 },
                 {
                     data: 'aksi',
@@ -92,22 +105,22 @@
                 setButtonLoadingState("#saveData .btn.btn-primary", true);
                 e.preventDefault();
                 const kode = $("#saveData #id").val();
-                let url = "{{ route('admin.kategori.store') }}";
+                let url = "{{ route('admin.distribution-center.store') }}";
                 const data = new FormData(this);
 
                 if (kode !== "") {
                     data.append("_method", "PUT");
-                    url = `/admin/kategori/${kode}`;
+                    url = `/admin/distribution-center/${kode}`;
                 }
 
                 const successCallback = function(response) {
                     setButtonLoadingState("#saveData .btn.btn-primary", false);
-                    handleSuccess(response, "kategori-table", "createModal");
+                    handleSuccess(response, "distribution-center-table", "createModal");
                 };
 
                 const errorCallback = function(error) {
                     setButtonLoadingState("#saveData .btn.btn-primary", false);
-                    handleValidationErrors(error, "saveData", ["nama", "jenis"]);
+                    handleValidationErrors(error, "saveData", ["kode", "nama", "alamat", "telepon"]);
                 };
 
                 ajaxCall(url, "POST", data, successCallback, errorCallback);

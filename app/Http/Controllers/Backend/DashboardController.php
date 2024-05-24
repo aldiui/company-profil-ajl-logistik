@@ -3,15 +3,20 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Store;
-use App\Models\Tarif;
+use App\Models\City;
+use App\Models\DistributionCenter;
+use App\Models\RetailPrice;
+use App\Models\TruckingPrice;
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        $store = Store::count();
-        $tarif = Tarif::count();
-        return view('pages.backend.dashboard.index', compact('store', 'tarif'));
+        return view('pages.backend.dashboard.index', [
+            'dc' => DistributionCenter::count(),
+            'kota' => City::count(),
+            'hargaRetail' => RetailPrice::count(),
+            'hargaTrucking' => TruckingPrice::count(),
+        ]);
     }
 }

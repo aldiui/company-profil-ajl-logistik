@@ -8,26 +8,28 @@
 
 @section('main')
     <div class="row justify-content-center align-items-center min-vh-100">
-        <div class="col-lg-4 col-md-7 col-12 px-4">
-            <div class="text-center mb-3">
-                <img src="{{ asset('backend/static/images/logo/logo.png') }}" class="img-fluid" width="200px" alt="Logo">
+        <div class="col-lg-5 col-md-7 col-12">
+            <div class="card card-body p-4">
+                <div class="text-center mb-3">
+                    <img src="{{ asset('frontend/img/logo-ajl.png') }}" class="img-fluid" width="200px" alt="Logo">
+                </div>
+                <h4 class="mb-3 text-center">Log in.</h4>
+                <form id="login" autocomplete="off">
+                    <div class="form-group mb-3">
+                        <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                        <input id="email" type="email" class="form-control" name="email">
+                        <small class="invalid-feedback" id="erroremail"></small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
+                        <input id="password" type="password" class="form-control" name="password">
+                        <small class="invalid-feedback" id="errorpassword"></small>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block shadow-lg">Log in</button>
+                    </div>
+                </form>
             </div>
-            <h4 class="mb-3 text-center">Log in.</h4>
-            <form id="login" autocomplete="off">
-                <div class="form-group mb-3">
-                    <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
-                    <input id="email" type="email" class="form-control" name="email">
-                    <small class="invalid-feedback" id="erroremail"></small>
-                </div>
-                <div class="form-group mb-3">
-                    <label for="password" class="form-label">Password <span class="text-danger">*</span></label>
-                    <input id="password" type="password" class="form-control" name="password">
-                    <small class="invalid-feedback" id="errorpassword"></small>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block shadow-lg">Log in</button>
-                </div>
-            </form>
         </div>
     </div>
 @endsection
@@ -44,8 +46,7 @@
 
                 const successCallback = function(response) {
                     setButtonLoadingState("#login .btn.btn-primary", false, "Login");
-                    handleSuccess(response, null, null, "./" +
-                        response.data.role);
+                    handleSuccess(response, null, null, "/admin");
                 };
 
                 const errorCallback = function(error) {

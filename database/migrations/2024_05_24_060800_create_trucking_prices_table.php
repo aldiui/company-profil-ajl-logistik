@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('stores', function (Blueprint $table) {
+        Schema::create('trucking_prices', function (Blueprint $table) {
             $table->id();
-            $table->string('kode')->unique();
-            $table->string('nama');
-            $table->string('whatsapp');
-            $table->string('lokasi');
-            $table->text('alamat');
+            $table->string('rute');
+            $table->string('blindvan');
+            $table->string('cde_box');
+            $table->string('cdd_box');
+            $table->string('fusobox');
+            $table->string('wingbox');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('stores');
+        Schema::dropIfExists('trucking_prices');
     }
 };

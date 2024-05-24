@@ -37,7 +37,7 @@ class AuthController extends Controller
             return $this->successResponse($user, 'Login berhasil.');
         }
 
-        return view('auth.login');
+        return view('pages.auth.login');
     }
 
     public function logout()
