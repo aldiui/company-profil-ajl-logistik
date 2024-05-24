@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('stores', function (Blueprint $table) {
             $table->id();
+            $table->string('kode')->unique();
+            $table->string('nama');
+            $table->string('whatsapp');
+            $table->string('lokasi');
+            $table->text('alamat');
             $table->timestamps();
         });
     }

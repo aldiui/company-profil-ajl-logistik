@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('tarifs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('store_id')->constrained('stores', 'id')->onDelete('cascade');
+            $table->string('kota_tujuan');
+            $table->string('keterangan')->nullable();
+            $table->enum('jalur', ['Laut', 'Udara', 'Darat']);
+            $table->integer('berat');
+            $table->string('estimasi');
+            $table->integer('harga');
             $table->timestamps();
         });
     }
