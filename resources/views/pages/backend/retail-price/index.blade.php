@@ -1,11 +1,14 @@
 @extends('layouts.backend')
 
-@section('title', 'Distribution Center')
+@section('title', 'Harga Retail')
 
 @push('style')
     <link rel="stylesheet" href="{{ asset('backend/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/compiled/css/table-datatable-jquery.css') }}">
     <link rel="stylesheet" href="{{ asset('backend/extensions/sweetalert2/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
 @endpush
 
 @section('main')
@@ -35,23 +38,23 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <h5 class="card-title mb-0">Data @yield('title')</h5>
                                 <div>
-                                    <button class="btn btn-success btn-sm" onclick="getModal('createModal')">
+                                    <button class="btn btn-success btn-sm" id="createBtn" onclick="getModal('createModal')">
                                         <i class="bi bi-plus me-2"></i>Tambah
                                     </button>
                                 </div>
                             </div>
                             <hr>
                             <div class="table-responsive">
-                                <table class="table table-bordered table-striped" id="trucking-price-table" width="100%">
+                                <table class="table table-bordered table-striped" id="retail-price-table" width="100%">
                                     <thead>
                                         <tr>
                                             <th width="5%">#</th>
-                                            <th>Rute</th>
-                                            <th>Blind Van</th>
-                                            <th>CDE Box</th>
-                                            <th>CDD Box</th>
-                                            <th>Fuso Box</th>
-                                            <th>Wing Box</th>
+                                            <th>Origin</th>
+                                            <th>Destination Kota</th>
+                                            <th>Kode</th>
+                                            <th>Harga 0-70 Kg</th>
+                                            <th>Harga 71+ Kg</th>
+                                            <th>Estimasi</th>
                                             <th width="15%">Aksi</th>
                                         </tr>
                                     </thead>
@@ -65,42 +68,44 @@
             </section>
         </div>
     </div>
-    @include('pages.backend.trucking-price.modal')
+    @include('pages.backend.retail-price.modal')
 @endsection
 
 @push('scripts')
     <script src="{{ asset('backend/extensions/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js') }}"></script>
     <script src="{{ asset('backend/extensions/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
     <script>
         $(document).ready(function() {
-            datatableCall('trucking-price-table', '{{ route('admin.trucking-price.index') }}', [{
+            datatableCall('retail-price-table', '{{ route('admin.retail-price.index') }}', [{
                     data: 'DT_RowIndex',
                     name: 'DT_RowIndex'
                 },
                 {
-                    data: 'rute',
-                    name: 'rute'
+                    data: 'distribution_center',
+                    name: 'distribution_center'
                 },
                 {
-                    data: 'blind_van',
-                    name: 'blind_van'
+                    data: 'city',
+                    name: 'city'
                 },
                 {
-                    data: 'cde_box',
-                    name: 'cde_box'
+                    data: 'city_code',
+                    name: 'city_code'
                 },
                 {
-                    data: 'cdd_box',
-                    name: 'cdd_box'
+                    data: 'harga_dibawah_tujuh_puluh',
+                    name: 'harga_dibawah_tujuh_puluh'
                 },
                 {
-                    data: 'fuso_box',
-                    name: 'fuso_box'
+                    data: 'harga_diatas_tujuh_puluh',
+                    name: 'harga_diatas_tujuh_puluh'
                 },
                 {
-                    data: 'wing_box',
-                    name: 'wing_box'
+                    data: 'estimasi_hari',
+                    name: 'estimasi_hari'
                 },
                 {
                     data: 'aksi',
@@ -108,33 +113,49 @@
                 },
             ]);
 
+
             $("#saveData").submit(function(e) {
                 setButtonLoadingState("#saveData .btn.btn-primary", true);
                 e.preventDefault();
                 const kode = $("#saveData #id").val();
-                let url = "{{ route('admin.trucking-price.store') }}";
+                let url = "{{ route('admin.retail-price.store') }}";
                 const data = new FormData(this);
 
                 if (kode !== "") {
                     data.append("_method", "PUT");
-                    url = `/admin/trucking-price/${kode}`;
+                    url = `/admin/retail-price/${kode}`;
                 }
 
                 const successCallback = function(response) {
                     setButtonLoadingState("#saveData .btn.btn-primary", false);
-                    handleSuccess(response, "trucking-price-table", "createModal");
+                    handleSuccess(response, "retail-price-table", "createModal");
                 };
 
                 const errorCallback = function(error) {
                     setButtonLoadingState("#saveData .btn.btn-primary", false);
-                    handleValidationErrors(error, "saveData", ["rute", "blind_van", "cde_box",
-                        "cdd_box",
-                        "fuso_box", "wing_box"
+                    handleValidationErrors(error, "saveData", ['distribution_center_id', 'city_id',
+                        'harga_dibawah_tujuh_puluh', 'harga_diatas_tujuh_puluh', 'estimasi_hari'
                     ]);
                 };
 
                 ajaxCall(url, "POST", data, successCallback, errorCallback);
             });
+
+            $("#createBtn").click(function() {
+                getSelectEdit()
+                $(`#distribution_center_id`)
+                    .val("")
+                    .trigger("change");
+                $(`#city_id`)
+                    .val("")
+                    .trigger("change");
+
+            });
         });
+
+        function getSelectEdit() {
+            select2ToJson("#distribution_center_id", "{{ route('admin.distribution-center.index') }}");
+            select2ToJson("#city_id", "{{ route('admin.city.index') }}");
+        }
     </script>
 @endpush

@@ -26,7 +26,6 @@
         </div>
     </div>
     <script src="{{ asset('backend/extensions/jquery/jquery.js') }}"></script>
-    <script src="{{ asset('backend/static/js/pages/horizontal-layout.js') }}"></script>
     <script src="{{ asset('backend/extensions/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
     <script src="{{ asset('backend/compiled/js/app.js') }}"></script>
     @stack('scripts')

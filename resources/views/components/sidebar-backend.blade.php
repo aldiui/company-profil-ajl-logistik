@@ -2,7 +2,7 @@
     <div class="sidebar-wrapper active">
         <div class="container text-center mt-4">
             <a href="/admin">
-                <img src="{{ asset('frontend/img/logo-ajl.png') }}" alt="Logo" width="120px">
+                <img src="{{ asset('frontend/assets/logo.png') }}" alt="Logo" width="120px">
             </a>
         </div>
         <div class="sidebar-menu">
@@ -16,7 +16,7 @@
                 <li class="sidebar-item {{ request()->is('admin/distribution-center') ? 'active' : '' }}">
                     <a href="{{ url('/admin/distribution-center') }}" class='sidebar-link'>
                         <i class="bi bi-house"></i>
-                        <span>DC</span>
+                        <span>Distribution Center</span>
                     </a>
                 </li>
                 <li class="sidebar-item {{ request()->is('admin/city') ? 'active' : '' }}">

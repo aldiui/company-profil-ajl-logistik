@@ -14,11 +14,11 @@ return new class extends Migration
         Schema::create('trucking_prices', function (Blueprint $table) {
             $table->id();
             $table->string('rute');
-            $table->string('blindvan');
-            $table->string('cde_box');
-            $table->string('cdd_box');
-            $table->string('fusobox');
-            $table->string('wingbox');
+            $table->unsignedBigInteger('blind_van');
+            $table->unsignedBigInteger('cde_box');
+            $table->unsignedBigInteger('cdd_box');
+            $table->unsignedBigInteger('fuso_box');
+            $table->unsignedBigInteger('wing_box');
             $table->timestamps();
         });
     }

@@ -15,8 +15,8 @@ const datatableCall = (targetId, url, columns) => {
         },
         columns: columns,
         lengthMenu: [
-            [25, 50, 100, 250, -1],
-            [25, 50, 100, 250, "All"],
+            [50, 100, 250, -1],
+            [50, 100, 250, "All"],
         ],
     });
 };
@@ -90,7 +90,9 @@ const getModal = (targetId, url = null, fields = null) => {
         const successCallback = function (response) {
             fields.forEach((field) => {
                 if (response.data[field]) {
-                    $(`#${targetId} #${field}`).val(response.data[field]);
+                    $(`#${targetId} #${field}`)
+                        .val(response.data[field])
+                        .trigger("change");
                 }
             });
         };

@@ -11,24 +11,34 @@
                 <div class="modal-body">
                     <input type="hidden" id="id">
                     <div class="form-group mb-3">
-                        <label for="kode" class="form-label">Kode <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="kode" name="kode">
-                        <small class="invalid-feedback" id="errorkode"></small>
+                        <label for="rute" class="form-label">Rute <span class="text-danger">*</span></label>
+                        <input type="text" class="form-control" id="rute" name="rute">
+                        <small class="invalid-feedback" id="errorrute"></small>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="nama" name="nama">
-                        <small class="invalid-feedback" id="errornama"></small>
+                        <label for="blind_van" class="form-label">Blind Van <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="blind_van" name="blind_van">
+                        <small class="invalid-feedback" id="errorblind_van"></small>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="alamat" class="form-label">Alamat <span class="text-danger">*</span></label>
-                        <textarea type="text" class="form-control" id="alamat" name="alamat"></textarea>
-                        <small class="invalid-feedback" id="erroralamat"></small>
+                        <label for="cde_box" class="form-label">CDE Box <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="cde_box" name="cde_box">
+                        <small class="invalid-feedback" id="errorcde_box"></small>
                     </div>
                     <div class="form-group mb-3">
-                        <label for="telepon" class="form-label">Telepon <span class="text-danger">*</span></label>
-                        <input type="text" class="form-control" id="telepon" name="telepon">
-                        <small class="invalid-feedback" id="errortelepon"></small>
+                        <label for="cdd_box" class="form-label">CDD Box <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="cdd_box" name="cdd_box">
+                        <small class="invalid-feedback" id="errorcdd_box"></small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="fuso_box" class="form-label">Fuso Box <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="fuso_box" name="fuso_box">
+                        <small class="invalid-feedback" id="errorfuso_box"></small>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="wing_box" class="form-label">Wing Box <span class="text-danger">*</span></label>
+                        <input type="number" class="form-control" id="wing_box" name="wing_box">
+                        <small class="invalid-feedback" id="errorwing_box"></small>
                     </div>
                 </div>
                 <div class="modal-footer">

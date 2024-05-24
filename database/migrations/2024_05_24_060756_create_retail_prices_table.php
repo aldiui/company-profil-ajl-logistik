@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->foreignId('distribution_center_id')->constrained('distribution_centers')->onDelete('cascade');
             $table->foreignId('city_id')->constrained('cities')->onDelete('cascade');
-            $table->integer('price_up_to_seventy');
-            $table->integer('price_above_seventy');
-            $table->integer('lead_time');
+            $table->unsignedBigInteger('harga_dibawah_tujuh_puluh');
+            $table->unsignedBigInteger('harga_diatas_tujuh_puluh');
+            $table->unsignedBigInteger('estimasi_hari');
             $table->timestamps();
         });
     }

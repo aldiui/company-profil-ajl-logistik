@@ -11,7 +11,7 @@
         <div class="col-lg-5 col-md-7 col-12">
             <div class="card card-body p-4">
                 <div class="text-center mb-3">
-                    <img src="{{ asset('frontend/img/logo-ajl.png') }}" class="img-fluid" width="200px" alt="Logo">
+                    <img src="{{ asset('frontend/assets/logo.png') }}" class="img-fluid" width="200px" alt="Logo">
                 </div>
                 <h4 class="mb-3 text-center">Log in.</h4>
                 <form id="login" autocomplete="off">
