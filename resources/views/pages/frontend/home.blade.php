@@ -44,48 +44,51 @@
                     <p>Keuntungan anda menggunakan jasa pengiriman kami</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100">
+                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
                         <div class="card-body text-center">
                             <h6 class="fw-bold text-ajl-primary mb-3">Fast Delivery</h6>
                             <div class="mb-2">
                                 <i class="bi bi-clock text-ajl-primary fs-1"></i>
                             </div>
-                            <p>Barang Anda akan tiba sesuai estimasi, dengan tepat waktu dan aman</p>
+                            <p class="mb-0">Barang Anda akan tiba sesuai estimasi, dengan tepat waktu dan aman</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100">
+                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
                         <div class="card-body text-center">
                             <h6 class="fw-bold text-ajl-primary mb-3">GPS Tracking</h6>
                             <div class="mb-2">
                                 <i class="bi bi-geo-alt text-ajl-primary fs-1"></i>
                             </div>
-                            <p>Kami menyediakan layanan GPS Tracking untuk meminimalisir hal-hal yang tidak diinginkan dan
+                            <p class="mb-0">Kami menyediakan layanan GPS Tracking untuk meminimalisir hal-hal yang tidak
+                                diinginkan dan
                                 menjaga keselamatan barang Anda</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100">
+                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
                         <div class="card-body text-center">
                             <h6 class="fw-bold text-ajl-primary mb-3">Affordable</h6>
                             <div class="mb-2">
                                 <i class="bi bi-cash-coin text-ajl-primary fs-1"></i>
                             </div>
-                            <p>Kami menawarkan layanan pengiriman yang terjangkau tanpa mengorbankan kualitas, sehingga Anda
+                            <p class="mb-0">Kami menawarkan layanan pengiriman yang terjangkau tanpa mengorbankan
+                                kualitas, sehingga Anda
                                 dapat menghemat biaya logistik Anda.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100">
+                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
                         <div class="card-body text-center">
                             <h6 class="fw-bold text-ajl-primary mb-3">Good Services</h6>
                             <div class="mb-2">
                                 <i class="bi bi-person-workspace text-ajl-primary fs-1"></i>
                             </div>
-                            <p>Kami selalu memberikan pelayanan terbaik kepada klien dengan respon yang cepat dan memberikan
+                            <p class="mb-0">Kami selalu memberikan pelayanan terbaik kepada klien dengan respon yang cepat
+                                dan memberikan
                                 solusi apabila terdapat hambatan</p>
                         </div>
                     </div>
