@@ -20,9 +20,19 @@
                         class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('layanan') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }}"
                         href="/layanan">Layanan</a>
                 </li>
-                <li class="nav-item"><a
-                        class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('tentang') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }}"
-                        href="/tentang">Tentang</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('tentang') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }} dropdown-toggle"
+                        href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Tentang Kami
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item  {{ Request::is('tentang') ? 'bg-ajl-secondary text-white' : '' }}"
+                                href="/tentang">Tentang</a></li>
+                        <li><a class="dropdown-item" href="/galery">Galery</a></li>
+                        <li><a class="dropdown-item" href="/video">Video</a></li>
+                        <li><a class="dropdown-item" href="/faq">FAQ</a></li>
+                    </ul>
+                </li>
                 <li class="nav-item"><a
                         class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('cek-tarif') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }}"
                         href="/cek-tarif">Cek Tarif</a>

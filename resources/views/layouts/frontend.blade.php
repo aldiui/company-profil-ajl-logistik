@@ -24,10 +24,16 @@
 
 <body id="#">
     <div id="arrowButton" class="me-lg-5 visible">
-        <div class="d-flex flex-lg-row flex-column">
-            <a href="#" class="btn btn-light bg-white shadow-none btn-sm border-ajl-secondary">
-                <i class="bi bi-arrow-up text-ajl-secondary fw-bold"></i>
+        <div class="d-flex flex-column gap-2">
+            <a href="https://api.whatsapp.com/send?phone=6282281018776&text=Salam%20PT.%20AJL%20Logistik%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pengiriman%20barang.%20Terima%20kasih."
+                class="btn btn-success btn-lg rounded-pill">
+                <i class="bi bi-whatsapp fw-bold fs-2"></i>
             </a>
+            <div class="text-center">
+                <a href="#" class="btn btn-light bg-white shadow-none border-ajl-secondary">
+                    <i class="bi bi-arrow-up text-ajl-secondary fw-bold"></i>
+                </a>
+            </div>
         </div>
     </div>
     <main class="flex-shrink-0">
@@ -37,6 +43,8 @@
     @include('components.footer-frontend')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{ asset('frontend/js/scripts.js') }}"></script>
+    <script src="{{ asset('backend/extensions/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('backend/static/js/custom.js') }}"></script>
     @stack('scripts')
 </body>
 

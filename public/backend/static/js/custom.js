@@ -177,11 +177,13 @@ const confirmDelete = (url, tableId) => {
     });
 };
 
-const select2ToJson = (selector, url) => {
+const select2ToJson = (selector, url, no = null) => {
     const selectElem = $(selector);
 
-    if (selectElem.children().length > 0) {
+    if (selectElem.children().length > 0 && no == null) {
         return;
+    } else {
+        selectElem.empty();
     }
 
     const successCallback = function (response) {
@@ -194,11 +196,16 @@ const select2ToJson = (selector, url) => {
             selectElem.append(option);
         });
 
-        selectElem.select2({
+        let select2Options = {
             theme: "bootstrap-5",
             width: "100%",
-            dropdownParent: $("#createModal"),
-        });
+        };
+
+        if (no == null) {
+            select2Options.dropdownParent = $("#createModal");
+        }
+
+        selectElem.select2(select2Options);
     };
 
     const errorCallback = function (error) {

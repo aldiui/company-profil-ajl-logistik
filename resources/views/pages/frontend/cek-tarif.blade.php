@@ -1,154 +1,96 @@
 @extends('layouts.frontend')
 
-@section('title', 'Home')
+@section('title', 'Cek Tarif')
 
 @push('style')
+    <link rel="stylesheet" href="{{ asset('backend/extensions/sweetalert2/sweetalert2.min.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/select2-bootstrap-5-theme@1.3.0/dist/select2-bootstrap-5-theme.min.css" />
 @endpush
 
 @section('main')
-    <header class="bg-home" style="background-image: url({{ asset('frontend/assets/background-home.png') }}); ">
-        <div class="bg-dark bg-opacity-25">
-            <div class="container">
-                <div class="row align-items-center" style="height: 90vh">
-                    <div class="col-lg-6  py-3 text-center text-lg-start">
-                        <h1 class="text-shadow mb-2 fw-bolder text-ajl-secondary">
-                            The Best Service Transport
-                        </h1>
-                        <h1 class="text-shadow mb-3 fw-bolder text-ajl-secondary">
-                            and Logistic Partner
-                        </h1>
-                        <p class="text-shadow text-white fw-semibold">
-                            We Deliver Your Stuff Safety And Fast
-                        </p>
+    <header class="py-5">
+        <div class="container">
+            <div class="card card-body shado-sm">
+                <h4 class="fw-bold text-white text-ajl-secondary mb-4 text-center">Cek Tarif</h4>
+                <form id="cekTarif" class="mb-3">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group mb-3">
+                                <label for="kategori" class="form-label">Kategori</label>
+                                <select class="form-control" id="kategori" name="kategori">
+                                    <option value="">-- Pilih Kategori --</option>
+                                    <option value="Retail">Retail</option>
+                                    <option value="Trucking">Trucking</option>
+                                </select>
+                                <small class="invalid-feedback" id="errorkategori"></small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group mb-3">
+                                <label for="kota_asal" class="form-label">Kota Asal</label>
+                                <select class="form-control" id="kota_asal" name="kota_asal">
+                                </select>
+                                <small class="invalid-feedback" id="errorkota_asal"></small>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group mb-3">
+                                <label for="kota_tujuan" class="form-label">Kota Tujuan</label>
+                                <select class="form-control" id="kota_tujuan" name="kota_tujuan">
+                                </select>
+                                <small class="invalid-feedback" id="errorkota_tujuan"></small>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-ajl-primary d-block w-100">Cek Tarif</button>
+                        </div>
                     </div>
-                </div>
+                </form>
+                <div id="hasilTarif" class="py-5"></div>
             </div>
         </div>
     </header>
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <h2 class="fw-bold text-ajl-secondary mb-3">Our Logistics Services</h2>
-                    <p>Kami menyediakan berbagai jenis pilihan pengiriman untuk menyesuaikan kebutuhan pengiriman logistik
-                        anda</p>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm rounded-0">
-                        <img src="{{ asset('frontend/assets/laut.jpg') }}" class="img-fluid custom-img rounded-0"
-                            alt="Laut - Our Logistics Services - {{ config('app.name') }} - Sea Transport">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold text-dark mb-0">Laut</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm rounded-0">
-                        <img src="{{ asset('frontend/assets/darat.png') }}" class="img-fluid custom-img rounded-0"
-                            alt="Darat - Our Logistics Services - {{ config('app.name') }} - Land Transport">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold text-dark mb-0">Darat</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm rounded-0">
-                        <img src="{{ asset('frontend/assets/udara.jpg') }}" class="img-fluid custom-img rounded-0"
-                            alt="Udara - Our Logistics Services - {{ config('app.name') }} - Air Transport">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold text-dark mb-0">Udara</h6>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm rounded-0">
-                        <img src="{{ asset('frontend/assets/kereta.jpg') }}" class="img-fluid custom-img rounded-0"
-                            alt="Kereta - Our Logistics Services - {{ config('app.name') }} - Train Transport">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold text-dark mb-0">Kereta</h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5 bg-ajl-primary">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 mb-3 text-center">
-                    <img src="{{ asset('frontend/assets/truck1.png') }}" class="img-fluid px-4"
-                        alt="Truck - {{ config('app.name') }} - Truck Transport">
-                </div>
-                <div class="col-lg-6 mb-3 text-center text-lg-start">
-                    <h2 class="fw-bold text-white text-ajl-secondary text-shadow mb-3">We Provide Shipping To Anywhere</h2>
-                    <p class="text-white">We Offer Fast And Reliable Shipping Services For Domestic And International
-                        Shipments With Land, Sea, Air Fleets Safely And On Time</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center mb-4">
-                    <h2 class="fw-bold text-ajl-secondary mb-3">Our Advantages</h2>
-                    <p>Keuntungan anda menggunakan jasa pengiriman kami</p>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold text-ajl-primary mb-3">Fast Delivery</h6>
-                            <div class="mb-2">
-                                <i class="bi bi-clock text-ajl-primary fs-1"></i>
-                            </div>
-                            <p class="mb-0">Barang Anda akan tiba sesuai estimasi, dengan tepat waktu dan aman</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold text-ajl-primary mb-3">GPS Tracking</h6>
-                            <div class="mb-2">
-                                <i class="bi bi-geo-alt text-ajl-primary fs-1"></i>
-                            </div>
-                            <p class="mb-0">Kami menyediakan layanan GPS Tracking untuk meminimalisir hal-hal yang tidak
-                                diinginkan dan
-                                menjaga keselamatan barang Anda</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold text-ajl-primary mb-3">Affordable</h6>
-                            <div class="mb-2">
-                                <i class="bi bi-cash-coin text-ajl-primary fs-1"></i>
-                            </div>
-                            <p class="mb-0">Kami menawarkan layanan pengiriman yang terjangkau tanpa mengorbankan
-                                kualitas, sehingga Anda
-                                dapat menghemat biaya logistik Anda.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
-                        <div class="card-body text-center">
-                            <h6 class="fw-bold text-ajl-primary mb-3">Good Services</h6>
-                            <div class="mb-2">
-                                <i class="bi bi-person-workspace text-ajl-primary fs-1"></i>
-                            </div>
-                            <p class="mb-0">Kami selalu memberikan pelayanan terbaik kepada klien dengan respon yang
-                                cepat
-                                dan memberikan
-                                solusi apabila terdapat hambatan</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 @endsection
 
 @push('scripts')
+    <script src="{{ asset('backend/extensions/sweetalert2/sweetalert2.min.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("#cekTarif").submit(function(e) {
+                setButtonLoadingState("#cekTarif .btn-ajl-primary", true);
+                e.preventDefault();
+                const url = "{{ route('cek-tarif') }}";
+                const data = new FormData(this);
+
+                const successCallback = function(response) {
+                    setButtonLoadingState("#cekTarif .btn-ajl-primary", false);
+                    $('#hasilTarif').html(response.data);
+                };
+
+                const errorCallback = function(error) {
+                    setButtonLoadingState("#cekTarif .btn-ajl-primary", false);
+                    handleValidationErrors(error, "cekTarif", ['kategori', 'kota_asal', 'kota_tujuan']);
+                    $('#hasilTarif').html(null);
+                };
+
+                ajaxCall(url, "POST", data, successCallback, errorCallback);
+            });
+
+        });
+
+        $("#kategori").on("change", function() {
+            let cekKategori = $("#kategori").val();
+            if (cekKategori) {
+                select2ToJson("#kota_asal", `/kota-asal/${cekKategori}`, "no");
+                select2ToJson("#kota_tujuan", `/kota-tujuan/${cekKategori}`, "no");
+            } else {
+                $("#kota_asal").val(null).trigger('change');
+                $("#kota_tujuan").val(null).trigger('change');
+            }
+        });
+    </script>
 @endpush

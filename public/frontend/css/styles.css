@@ -13779,7 +13779,7 @@ html {
 .custom-img-trucking {
     height: 360px;
     object-fit: cover;
-    object-position: bottom; 
+    object-position: bottom;
     width: 100%;
 }
 
@@ -13882,4 +13882,21 @@ html {
 
 .navbar-toggler.collapsed .bottom-bar {
     transform: rotate(0);
+}
+
+.btn-ajl-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #348ecd;
+    --bs-btn-border-color: #348ecd;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #348ec1;
+    --bs-btn-hover-border-color: #3481cd;
+    --bs-btn-focus-shadow: 0 0 0 0.25rem rgba(52, 142, 205, 0.5);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #3481cd;
+    --bs-btn-active-border-color: #348ec1;
+    --bs-btn-active-shadow: inset 0 0.2rem 0.4rem rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #348ecd;
+    --bs-btn-disabled-border-color: #348ecd;
 }
