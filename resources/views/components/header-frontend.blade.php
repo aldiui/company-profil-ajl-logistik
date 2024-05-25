@@ -1,26 +1,19 @@
-<header class="navbar-area">
-    <nav class="navbar navbar-area-2 navbar-area navbar-expand-lg">
-        <div class="container nav-container">
-            <div class="responsive-mobile-menu">
-                <button class="menu toggle-btn d-block d-lg-none" data-target="#transpro_main_menu" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="icon-left"></span>
-                    <span class="icon-right"></span>
-                </button>
-            </div>
-            <div class="logo">
-                <a class="logo-1" href="index.html"><img src="/frontend/img//home-2/logo.png" alt="img"></a>
-                <a class="logo-2" href="index.html"><img src="/frontend/img/logo-ajl.png" alt="logo"></a>
-            </div>
-            <div class="collapse navbar-collapse" id="transpro_main_menu">
-                <ul class="navbar-nav menu-open text-end">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/">Layanan</a></li>
-                    <li><a href="/">Tentang Kami</a></li>
-                    <li><a href="/">Cek Tarif</a></li>
-                    <li><a href="/">Cabang</a></li>
-                </ul>
-            </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-white py-3 sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <img class="profile-img" src="/frontend/assets/logo.png" width="150px" alt="..." />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                <li class="nav-item"><a class="nav-link ms-lg-3" href="/">Home</a></li>
+                <li class="nav-item"><a class="nav-link ms-lg-3" href="/">Layanan</a></li>
+                <li class="nav-item"><a class="nav-link ms-lg-3" href="/">Tentang Kami</a></li>
+                <li class="nav-item"><a class="nav-link ms-lg-3" href="/">Cek Tarif</a></li>
+                <li class="nav-item"><a class="nav-link ms-lg-3" href="/">Cabang</a></li>
+            </ul>
         </div>
-    </nav>
-</header>
+    </div>
+</nav>

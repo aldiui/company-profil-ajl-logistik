@@ -9,7 +9,7 @@ use App\Http\Controllers\Backend\TruckingPriceController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pages.frontend.home');
 });
 
 Route::match(['get', 'post'], '/login', [AuthController::class, 'login'])->name('login');
