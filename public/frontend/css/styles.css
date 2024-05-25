@@ -13764,9 +13764,14 @@ html {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90vh;
 }
 
 .text-shadow {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.custom-img {
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
 }

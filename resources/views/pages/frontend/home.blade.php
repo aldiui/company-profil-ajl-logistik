@@ -25,13 +25,63 @@
             </div>
         </div>
     </header>
-    <section class="bg-light py-5">
+    <section class="py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
+                <div class="col-12 text-center mb-4">
                     <h2 class="fw-bold text-ajl-secondary mb-3">Our Logistics Services</h2>
                     <p>Kami menyediakan berbagai jenis pilihan pengiriman untuk menyesuaikan kebutuhan pengiriman logistik
                         anda</p>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card shadow-sm rounded-0">
+                        <img src="{{ asset('frontend/assets/laut.jpg') }}" class="img-fluid custom-img rounded-0"
+                            alt="Laut - Our Logistics Services - {{ config('app.name') }} - Sea Transport">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold text-dark mb-0">Laut</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card shadow-sm rounded-0">
+                        <img src="{{ asset('frontend/assets/darat.png') }}" class="img-fluid custom-img rounded-0"
+                            alt="Darat - Our Logistics Services - {{ config('app.name') }} - Land Transport">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold text-dark mb-0">Darat</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card shadow-sm rounded-0">
+                        <img src="{{ asset('frontend/assets/udara.jpg') }}" class="img-fluid custom-img rounded-0"
+                            alt="Udara - Our Logistics Services - {{ config('app.name') }} - Air Transport">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold text-dark mb-0">Udara</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 mb-3">
+                    <div class="card shadow-sm rounded-0">
+                        <img src="{{ asset('frontend/assets/kereta.jpg') }}" class="img-fluid custom-img rounded-0"
+                            alt="Kereta - Our Logistics Services - {{ config('app.name') }} - Train Transport">
+                        <div class="card-body text-center">
+                            <h6 class="fw-bold text-dark mb-0">Kereta</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-ajl-primary">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-6 mb-3">
+                    <img src="{{ asset('frontend/assets/truck1.png') }}" class="img-fluid px-4"
+                        alt="Truck - {{ config('app.name') }} - Truck Transport">
+                </div>
+                <div class="col-lg-6 mb-3 text-center text-lg-start">
+                    <h2 class="fw-bold text-white text-ajl-secondary text-shadow mb-3">We Provide Shipping To Anywhere</h2>
+                    <p class="text-white">We Offer Fast And Reliable Shipping Services For Domestic And International Shipments With Land, Sea, Air Fleets Safely And On Time</p>
                 </div>
             </div>
         </div>
@@ -87,7 +137,8 @@
                             <div class="mb-2">
                                 <i class="bi bi-person-workspace text-ajl-primary fs-1"></i>
                             </div>
-                            <p class="mb-0">Kami selalu memberikan pelayanan terbaik kepada klien dengan respon yang cepat
+                            <p class="mb-0">Kami selalu memberikan pelayanan terbaik kepada klien dengan respon yang
+                                cepat
                                 dan memberikan
                                 solusi apabila terdapat hambatan</p>
                         </div>
