@@ -2,7 +2,7 @@
     <div class="sidebar-wrapper active">
         <div class="container text-center mt-4">
             <a href="/admin">
-                <img src="{{ asset('frontend/assets/logo.png') }}" alt="Logo" width="120px">
+                <img src="{{ asset('frontend/assets/logo.png') }}" width="120px" alt="Logo - {{ config('app.name') }}">
             </a>
         </div>
         <div class="sidebar-menu">

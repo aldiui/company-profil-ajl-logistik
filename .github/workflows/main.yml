@@ -2,21 +2,23 @@ on:
   push:
     branches:
       - main
-name: 🚀 Deploy website on push
+name: Sending to the moon 🚀
 jobs:
   web-deploy:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
       - name: 🚚 Get latest code
-        uses: actions/checkout@v4
-
+        uses: actions/checkout@v3
       - name: 📂 Sync files
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           exclude: |
-            */.git
-            /.git/*
+            **/.git*
+            **/.git*/**
+            composer.json
+            composer.lock
+            **tests/**

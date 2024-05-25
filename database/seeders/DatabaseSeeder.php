@@ -31,14 +31,20 @@ class DatabaseSeeder extends Seeder
             [
                 'kode' => 'DC Marunda',
                 'nama' => 'Marunda',
+                'alamat' => 'Ruko Ifolia Blok HY 47, Kota Harapan Indah No.45, Pusaka Rakyat, Kec. Tarumajaya, Kabupaten Bekasi, Jawa Barat 17214',
+                'telepon' => '02189444706',
             ],
             [
                 'kode' => 'DC Surabaya',
                 'nama' => 'Surabaya',
+                'alamat' => null,
+                'telepon' => null,
             ],
             [
                 'kode' => 'DC Medan',
                 'nama' => 'Medan',
+                'alamat' => 'Jl. Bromo Ujung No.226 D, Binjai, Kec. Medan Denai, Kota Medan, Sumatera Utara 20228',
+                'telepon' => '082160602089',
             ],
         ];
 

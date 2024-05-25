@@ -34,40 +34,77 @@
                         anda</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm rounded-0">
-                        <img src="{{ asset('frontend/assets/laut.jpg') }}" class="img-fluid custom-img rounded-0"
+                    <div class="card shadow-sm rounded-4">
+                        <img src="{{ asset('frontend/assets/laut.jpg') }}"
+                            class="img-fluid rounded-top card-img-top custom-img"
                             alt="Laut - Our Logistics Services - {{ config('app.name') }} - Sea Transport">
                         <div class="card-body text-center">
-                            <h6 class="fw-bold text-dark mb-0">Laut</h6>
+                            <h5 class="fw-bold text-dark mb-0">Laut</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm rounded-0">
-                        <img src="{{ asset('frontend/assets/darat.png') }}" class="img-fluid custom-img rounded-0"
+                    <div class="card shadow-sm rounded-4">
+                        <img src="{{ asset('frontend/assets/darat.png') }}"
+                            class="img-fluid rounded-top card-img-top custom-img"
                             alt="Darat - Our Logistics Services - {{ config('app.name') }} - Land Transport">
                         <div class="card-body text-center">
-                            <h6 class="fw-bold text-dark mb-0">Darat</h6>
+                            <h5 class="fw-bold text-dark mb-0">Darat</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm rounded-0">
-                        <img src="{{ asset('frontend/assets/udara.jpg') }}" class="img-fluid custom-img rounded-0"
+                    <div class="card shadow-sm rounded-4">
+                        <img src="{{ asset('frontend/assets/udara.jpg') }}"
+                            class="img-fluid rounded-top card-img-top custom-img"
                             alt="Udara - Our Logistics Services - {{ config('app.name') }} - Air Transport">
                         <div class="card-body text-center">
-                            <h6 class="fw-bold text-dark mb-0">Udara</h6>
+                            <h5 class="fw-bold text-dark mb-0">Udara</h5>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm rounded-0">
-                        <img src="{{ asset('frontend/assets/kereta.jpg') }}" class="img-fluid custom-img rounded-0"
+                    <div class="card shadow-sm rounded-4">
+                        <img src="{{ asset('frontend/assets/kereta.jpg') }}"
+                            class="img-fluid rounded-top card-img-top custom-img"
                             alt="Kereta - Our Logistics Services - {{ config('app.name') }} - Train Transport">
                         <div class="card-body text-center">
-                            <h6 class="fw-bold text-dark mb-0">Kereta</h6>
+                            <h5 class="fw-bold text-dark mb-0">Kereta</h5>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-bold text-ajl-secondary mb-3">Trust in Our Logistics Services</h2>
+                    <p>Kami memahami bahwa kepercayaan adalah kunci dalam layanan logistik. Oleh karena itu, kami
+                        menyediakan berbagai jenis pilihan pengiriman yang dapat diandalkan untuk memenuhi kebutuhan
+                        logistik Anda dengan integritas dan transparansi.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 text-center">
+                    <img src="{{ asset('frontend/assets/sertifikat-halal.png') }}" class="img-fluid"
+                        alt="Sertifikat Halal - {{ config('app.name') }}">
+                    <h5 class="mt-2 fw-bold text-ajl-secondary">Sertifikat Halal</h5>
+                    <p>Dengan sertifikat halal, kami memastikan semua proses logistik sesuai dengan standar halal yang
+                        berlaku.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 text-center">
+                    <img src="{{ asset('frontend/assets/sertifikat-iso.png') }}" class="img-fluid"
+                        alt="Sertifikat ISO - {{ config('app.name') }}">
+                    <h5 class="mt-2 fw-bold text-ajl-secondary">Sertifikat ISO</h5>
+                    <p>Sertifikat ISO menunjukkan komitmen kami terhadap kualitas dan standar internasional dalam layanan
+                        logistik.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-3 text-center">
+                    <img src="{{ asset('frontend/assets/gps-tracking.png') }}" class="img-fluid"
+                        alt="GPS Tracking - {{ config('app.name') }}">
+                    <h5 class="mt-2 fw-bold text-ajl-secondary">GPS Tracking</h5>
+                    <p>Layanan GPS Tracking kami memungkinkan Anda untuk melacak pengiriman secara real-time, memberikan
+                        ketenangan pikiran dan transparansi.</p>
                 </div>
             </div>
         </div>
@@ -75,13 +112,15 @@
     <section class="py-5 bg-ajl-primary">
         <div class="container">
             <div class="row justify-content-center align-items-center">
-                <div class="col-lg-6 mb-3">
-                    <img src="{{ asset('frontend/assets/truck1.png') }}" class="img-fluid px-4"
+                <div class="col-lg-6 mb-3 text-center">
+                    <img src="{{ asset('frontend/assets/truck1.png') }}"
+                        class="img-fluid rounded-4  rounded-top card-img-top w-100 px-4"
                         alt="Truck - {{ config('app.name') }} - Truck Transport">
                 </div>
                 <div class="col-lg-6 mb-3 text-center text-lg-start">
                     <h2 class="fw-bold text-white text-ajl-secondary text-shadow mb-3">We Provide Shipping To Anywhere</h2>
-                    <p class="text-white">We Offer Fast And Reliable Shipping Services For Domestic And International Shipments With Land, Sea, Air Fleets Safely And On Time</p>
+                    <p class="text-white">We Offer Fast And Reliable Shipping Services For Domestic And International
+                        Shipments With Land, Sea, Air Fleets Safely And On Time</p>
                 </div>
             </div>
         </div>
@@ -94,9 +133,9 @@
                     <p>Keuntungan anda menggunakan jasa pengiriman kami</p>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
+                    <div class="card shadow-sm border-ajl-primary h-100 p-2 rounded-4">
                         <div class="card-body text-center">
-                            <h6 class="fw-bold text-ajl-primary mb-3">Fast Delivery</h6>
+                            <h5 class="fw-bold text-dark mb-3">Fast Delivery</h5>
                             <div class="mb-2">
                                 <i class="bi bi-clock text-ajl-primary fs-1"></i>
                             </div>
@@ -105,9 +144,9 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
+                    <div class="card shadow-sm border-ajl-primary h-100 p-2 rounded-4">
                         <div class="card-body text-center">
-                            <h6 class="fw-bold text-ajl-primary mb-3">GPS Tracking</h6>
+                            <h5 class="fw-bold text-dark mb-3">GPS Tracking</h5>
                             <div class="mb-2">
                                 <i class="bi bi-geo-alt text-ajl-primary fs-1"></i>
                             </div>
@@ -118,9 +157,9 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
+                    <div class="card shadow-sm border-ajl-primary h-100 p-2 rounded-4">
                         <div class="card-body text-center">
-                            <h6 class="fw-bold text-ajl-primary mb-3">Affordable</h6>
+                            <h5 class="fw-bold text-dark mb-3">Affordable</h5>
                             <div class="mb-2">
                                 <i class="bi bi-cash-coin text-ajl-primary fs-1"></i>
                             </div>
@@ -131,9 +170,9 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 mb-3">
-                    <div class="card shadow-sm border-ajl-primary h-100 p-2">
+                    <div class="card shadow-sm border-ajl-primary h-100 p-2 rounded-4">
                         <div class="card-body text-center">
-                            <h6 class="fw-bold text-ajl-primary mb-3">Good Services</h6>
+                            <h5 class="fw-bold text-dark mb-3">Good Services</h5>
                             <div class="mb-2">
                                 <i class="bi bi-person-workspace text-ajl-primary fs-1"></i>
                             </div>

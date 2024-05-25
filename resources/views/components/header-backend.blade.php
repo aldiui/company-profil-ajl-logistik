@@ -10,7 +10,8 @@
                         class="user-dropdown d-flex align-items-center dropend dropdown-toggle "
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <div class="avatar avatar-md2">
-                            <img src="{{ asset('backend/compiled/jpg/1.jpg') }}" id="foto-profil" alt="Avatar">
+                            <img src="{{ asset('backend/compiled/jpg/1.jpg') }}" id="foto-profil"
+                                alt="Logo - {{ config('app.name') }}">
                         </div>
                         <div class="text">
                             <h6 class="user-dropdown-name">{{ Auth::user()->nama ?? '' }}</h6>

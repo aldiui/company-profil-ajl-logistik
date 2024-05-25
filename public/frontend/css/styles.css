@@ -13775,3 +13775,111 @@ html {
     object-fit: cover;
     width: 100%;
 }
+
+.custom-img-trucking {
+    height: 360px;
+    object-fit: cover;
+    object-position: bottom; 
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #F6811E;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #F6811E;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-track:hover {
+    background-color: #ddd;
+}
+
+#arrowButton {
+    position: fixed;
+    bottom: -55px;
+    right: 20px;
+    transition: bottom 0.3s ease-in-out;
+    z-index: 9999;
+}
+
+#arrowButton.visible {
+    bottom: 20px;
+}
+
+.navbar-toggler {
+    border: 0;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.toggler-icon {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #F6811E;
+    border-radius: 3px;
+    transition: all 0.5s;
+}
+
+.mid-bar {
+    margin: 5px auto;
+}
+
+.navbar-toggler .mid-bar {
+    opacity: 0;
+    filter: alpha(opacity-0);
+    -webkit-filter: alpha(opacity-0);
+}
+
+.navbar-toggler .top-bar {
+    transform: rotate(45.5deg) translate(-1px, -1.5px);
+    transform-origin: 10% 9%;
+    -webkit-transform: rotate(45.5deg) translate(-1px, -1.5px);
+    -moz-transform: rotate(45.5deg) translate(-1px, -1.5px);
+    -ms-transform: rotate(45.5deg) translate(-1px, -1.5px);
+    -o-transform: rotate(45.5deg) translate(-1px, -1.5px);
+}
+
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45.5deg) translate(-1px, -1.5px);
+    transform-origin: 10% 9%;
+    -webkit-transform: rotate(-45.5deg) translate(-1px, -1.5px);
+    -moz-transform: rotate(-45.5deg) translate(-1px, -1.5px);
+    -ms-transform: rotate(-45.5deg) translate(-1px, -1.5px);
+    -o-transform: rotate(-45.5deg) translate(-1px, -1.5px);
+}
+
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .mid-bar {
+    opacity: 1;
+    filter: alpha(opacity-100);
+    -webkit-filter: alpha(opacity-100);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+}

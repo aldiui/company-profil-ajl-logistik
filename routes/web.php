@@ -6,11 +6,14 @@ use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\DistributionCenterController;
 use App\Http\Controllers\Backend\RetailPriceController;
 use App\Http\Controllers\Backend\TruckingPriceController;
+use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('pages.frontend.home');
-});
+Route::get('/', [FrontendController::class, 'index']);
+Route::get('/layanan', [FrontendController::class, 'layanan']);
+Route::get('/tentang', [FrontendController::class, 'tentang']);
+Route::get('/cek-tarif', [FrontendController::class, 'cekTarif']);
+Route::get('/cabang', [FrontendController::class, 'cabang']);
 
 Route::match(['get', 'post'], '/login', [AuthController::class, 'login'])->name('login');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');

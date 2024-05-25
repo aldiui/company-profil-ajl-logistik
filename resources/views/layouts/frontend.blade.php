@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
+    <meta name="description"
+        content="AJL Logistik menyediakan solusi logistik yang andal dan efisien untuk kebutuhan pengiriman barang Anda." />
+    <meta name="author" content="AJL Logistik" />
+    <meta name="keywords"
+        content="logistik, pengiriman barang, transportasi, manajemen logistik, distribusi, AJL Logistik" />
     <title>@yield('title') - {{ config('app.name') }}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" type="image/x-icon" href="{{ asset('frontend/assets/favicon.ico') }}" />
@@ -19,7 +22,14 @@
     @stack('style')
 </head>
 
-<body class="d-flex flex-column">
+<body id="#">
+    <div id="arrowButton" class="me-lg-5 visible">
+        <div class="d-flex flex-lg-row flex-column">
+            <a href="#" class="btn btn-light bg-white shadow-none btn-sm border-ajl-secondary">
+                <i class="bi bi-arrow-up text-ajl-secondary fw-bold"></i>
+            </a>
+        </div>
+    </div>
     <main class="flex-shrink-0">
         @include('components.header-frontend')
         @yield('main')
