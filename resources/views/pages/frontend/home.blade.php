@@ -193,8 +193,8 @@
                     <h2 class="fw-bold text-ajl-secondary mb-3">Our Blog</h2>
                     <p>Blog Kami Memberikan Informasi Mengenai Layanan Kami</p>
                 </div>
-                <div class="col-lg-6 mb-3">
-                    <div class="card shadow-sm rounded-0">
+                <div class="col-md-6 mb-3">
+                    <div class="card shadow-sm rounded-0 h-100">
                         <div class="row g-0">
                             <div class="col-lg-4 bg-home"
                                 style="background-image: url('{{ asset('frontend/assets/gudang.png') }}'); height: 300px;">
@@ -213,8 +213,7 @@
                                     </div>
                                     <p class="card-text">Peningkatan tren permintaan terhadap halal produk membuat logistik
                                         halal
-                                        diimplementasikan oleh banyak negara seperti Indonesia. Halal dalam konteks logistik
-                                        memiliki beberapa tahapan dalam implementasinya</p>
+                                        diimplementasikan oleh banyak negara seperti Indonesia</p>
                                     <a href="https://supplychainindonesia.com/logistik-dan-rantai-pasok-halal/"
                                         class="text-ajl-primary fw-semibold">Lihat Selengkapnya</a>
                                 </div>
@@ -222,8 +221,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 mb-3">
-                    <div class="card shadow-sm rounded-0">
+                <div class="col-md-6 mb-3">
+                    <div class="card shadow-sm rounded-0 h-100">
                         <div class="row g-0">
                             <div class="col-lg-4 bg-home"
                                 style="background-image: url('{{ asset('frontend/assets/fuso-box.png') }}'); height: 300px;">

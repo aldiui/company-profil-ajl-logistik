@@ -63,11 +63,11 @@
                     <div class="accordion-item border-0 mb-3 rounded-0">
                         <h2 class="accordion-header border-bottom border-3 border-ajl-primary">
                             <button class="accordion-button fw-semibold collapsed" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#FaqThree" aria-expanded="false" aria-controls="FaqThree">
+                                data-bs-target="#FaqFour" aria-expanded="false" aria-controls="FaqFour">
                                 Apa yang terjadi jika customer paket yang berisikan barang berbahaya ?
                             </button>
                         </h2>
-                        <div id="FaqThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div id="FaqFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
                                 Bagi customer yang dengan sengaja mengirimkan barang yang dilarang atau barang berbahaya
                                 maka berdasarkan Pasal 47 UU No. 38 Th. 2009, customer akan dipidana dengan hukuman penjara
