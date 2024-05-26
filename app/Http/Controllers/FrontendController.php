@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\City;
+use App\Models\Corporate;
 use App\Models\DistributionCenter;
 use App\Models\Galery;
 use App\Models\RetailPrice;
@@ -66,15 +67,25 @@ class FrontendController extends Controller
         return view('pages.frontend.cabang', compact('distributionCenters'));
     }
 
-    public function galery()
+    public function galery(Request $request)
     {
-        $galeries = Galery::all();
+        $galeries = Galery::paginate(12);
+
+        if ($request->ajax()) {
+            return view('pages.frontend.galery-pagination', compact('galeries'))->render();
+        }
+
         return view('pages.frontend.galery', compact('galeries'));
     }
 
-    public function video()
+    public function video(Request $request)
     {
-        $videos = Video::all();
+        $videos = Video::paginate(10);
+
+        if ($request->ajax()) {
+            return view('pages.frontend.video-pagination', compact('videos'))->render();
+        }
+
         return view('pages.frontend.video', compact('videos'));
     }
 
@@ -116,5 +127,36 @@ class FrontendController extends Controller
         }
 
         abort(404);
+    }
+
+    public function orderCorporate(Request $request)
+    {
+        if ($request->isMethod('post')) {
+            $validator = Validator::make($request->all(), [
+                'nama_perusahaan' => 'required|min:3',
+                'nama_pic' => 'required|min:3',
+                'email' => 'required|email',
+                'no_handphone' => 'required',
+                'alamat_kantor' => 'required',
+            ]);
+
+            if ($validator->fails()) {
+                return $this->errorResponse($validator->errors(), 'Data tidak valid.', 422);
+            }
+
+            $corporate = Corporate::create($request->only(['nama_perusahaan', 'nama_pic', 'email', 'no_handphone', 'alamat_kantor']));
+
+            $message = "Nama Perusahaan: " . $corporate->nama_perusahaan . " \n" .
+            "Nama PIC: " . $corporate->nama_pic . " \n" .
+            "Email: " . $corporate->email . " \n" .
+            "No Handphone: " . $corporate->no_handphone . " \n" .
+            "Alamat Kantor: " . $corporate->alamat_kantor;
+
+            $encodedMessage = urlencode($message);
+            $link = "https://api.whatsapp.com/send?phone=6282281018776&text=$encodedMessage";
+            return $this->successResponse(compact('link'), 'Order corporate berhasil');
+        }
+
+        return view('pages.frontend.order-corporate');
     }
 }

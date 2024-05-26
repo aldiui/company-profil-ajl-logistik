@@ -44,6 +44,10 @@
                         class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('cabang') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }}"
                         href="/cabang">Cabang</a>
                 </li>
+                <li class="nav-item"><a
+                        class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('order-corporate') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }}"
+                        href="/order-corporate">Order Corporate</a>
+                </li>
             </ul>
         </div>
     </div>

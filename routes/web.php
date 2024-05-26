@@ -1,15 +1,16 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Backend\CityController;
-use App\Http\Controllers\Backend\DashboardController;
-use App\Http\Controllers\Backend\DistributionCenterController;
+use App\Http\Controllers\Backend\VideoController;
 use App\Http\Controllers\Backend\GaleryController;
+use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\RetailPriceController;
 use App\Http\Controllers\Backend\TruckingPriceController;
-use App\Http\Controllers\Backend\VideoController;
-use App\Http\Controllers\FrontendController;
-use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Backend\OrderCorporateController;
+use App\Http\Controllers\Backend\DistributionCenterController;
 
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('layanan', [FrontendController::class, 'layanan']);
@@ -20,6 +21,7 @@ Route::get('cabang', [FrontendController::class, 'cabang']);
 Route::get('galery', [FrontendController::class, 'galery']);
 Route::get('video', [FrontendController::class, 'video']);
 Route::get('faq', [FrontendController::class, 'faq']);
+Route::match(['get', 'post'], 'order-corporate', [FrontendController::class, 'orderCorporate'])->name('order-corporate');
 Route::get('kota-asal/{kategori}', [FrontendController::class, 'kotaAsal']);
 Route::get('kota-tujuan/{kategori}', [FrontendController::class, 'kotaTujuan']);
 
@@ -35,4 +37,5 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('trucking-price', TruckingPriceController::class)->names('admin.trucking-price');
     Route::resource('galery', GaleryController::class)->names('admin.galery');
     Route::resource('video', VideoController::class)->names('admin.video');
+    Route::resource('order-corporate', OrderCorporateController::class)->names('admin.order-corporate');
 });
