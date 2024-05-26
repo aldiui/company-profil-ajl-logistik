@@ -21,16 +21,19 @@
                         href="/layanan">Layanan</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('tentang') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }} dropdown-toggle"
+                    <a class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('tentang') || Request::is('galery') || Request::is('video') || Request::is('faq') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }} dropdown-toggle"
                         href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Tentang Kami
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item  {{ Request::is('tentang') ? 'bg-ajl-secondary text-white' : '' }}"
+                    <ul class="dropdown-menu text-center text-lg-start">
+                        <li><a class="dropdown-item {{ Request::is('tentang') ? 'bg-ajl-secondary text-white' : '' }}"
                                 href="/tentang">Tentang</a></li>
-                        <li><a class="dropdown-item" href="/galery">Galery</a></li>
-                        <li><a class="dropdown-item" href="/video">Video</a></li>
-                        <li><a class="dropdown-item" href="/faq">FAQ</a></li>
+                        <li><a class="dropdown-item {{ Request::is('galery') ? 'bg-ajl-secondary text-white' : '' }}"
+                                href="/galery">Galery</a></li>
+                        <li><a class="dropdown-item {{ Request::is('video') ? 'bg-ajl-secondary text-white' : '' }}"
+                                href="/video">Video</a></li>
+                        <li><a class="dropdown-item {{ Request::is('faq') ? 'bg-ajl-secondary text-white' : '' }}"
+                                href="/faq">FAQ</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a

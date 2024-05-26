@@ -6,10 +6,10 @@
 @endpush
 
 @section('main')
-    <header class="container py-5">
-        <div class="row py-5">
+    <header class="container py-5 min-vh-100">
+        <div class="row">
             <div class="col-12 text-center mb-4">
-                <h2 class="fw-bold text-ajl-secondary mb-3">Cabang</h2>
+                <h3 class="fw-bold text-ajl-secondary mb-4">Cabang</h3>
             </div>
             @foreach ($distributionCenters as $row)
                 <div class="col-md-6 col-lg-4 mb-3">

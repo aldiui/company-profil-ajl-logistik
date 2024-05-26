@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\DistributionCenter;
+use App\Models\Galery;
 use App\Models\RetailPrice;
 use App\Models\TruckingPrice;
+use App\Models\Video;
 use App\Traits\ApiResponder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -66,17 +68,19 @@ class FrontendController extends Controller
 
     public function galery()
     {
-
+        $galeries = Galery::all();
+        return view('pages.frontend.galery', compact('galeries'));
     }
 
     public function video()
     {
-
+        $videos = Video::all();
+        return view('pages.frontend.video', compact('videos'));
     }
 
     public function faq()
     {
-
+        return view('pages.frontend.faq');
     }
 
     public function kotaAsal(Request $request, $kategori)

@@ -6,7 +6,7 @@
 @endpush
 
 @section('main')
-    <header class="py-5">
+    <header class="py-5 min-vh-100">
         <div class="container">
             <div class="row justify-content-center align-items-center flex-column-reverse flex-lg-row">
                 <div class="col-lg-6 mb-3 text-center text-lg-start">

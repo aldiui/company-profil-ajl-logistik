@@ -889,5 +889,14 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
+        $videoData = [
+            [
+                'judul' => 'Tak Mahal, Ini Biaya Sertifikasi Logistik Halal |PT. AJL Logistik Indonesia',
+                'link' => 'https://youtu.be/oqekB36eiuc?si=NJoafKx8tIvebXcJ',
+            ],
+        ];
+
+        DB::table('videos')->insert($videoData);
+
     }
 }

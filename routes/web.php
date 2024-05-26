@@ -4,8 +4,10 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Backend\CityController;
 use App\Http\Controllers\Backend\DashboardController;
 use App\Http\Controllers\Backend\DistributionCenterController;
+use App\Http\Controllers\Backend\GaleryController;
 use App\Http\Controllers\Backend\RetailPriceController;
 use App\Http\Controllers\Backend\TruckingPriceController;
+use App\Http\Controllers\Backend\VideoController;
 use App\Http\Controllers\FrontendController;
 use Illuminate\Support\Facades\Route;
 
@@ -31,4 +33,6 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('city', CityController::class)->names('admin.city');
     Route::resource('retail-price', RetailPriceController::class)->names('admin.retail-price');
     Route::resource('trucking-price', TruckingPriceController::class)->names('admin.trucking-price');
+    Route::resource('galery', GaleryController::class)->names('admin.galery');
+    Route::resource('video', VideoController::class)->names('admin.video');
 });
