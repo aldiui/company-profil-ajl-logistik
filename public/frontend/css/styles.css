@@ -13780,6 +13780,10 @@ html {
     width: 100%;
 }
 
+.custom-fit {
+    object-fit: cover;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
 }

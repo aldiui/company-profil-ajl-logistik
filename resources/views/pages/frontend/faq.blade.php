@@ -72,7 +72,8 @@
                                 Bagi customer yang dengan sengaja mengirimkan barang yang dilarang atau barang berbahaya
                                 maka berdasarkan Pasal 47 UU No. 38 Th. 2009, customer akan dipidana dengan hukuman penjara
                                 paling lama 5 (lima) tahun atau denda paling banyak Rp. 1.000.000.000,- (Satu Miliar Rupiah)
-                                dan pihak penyedia jasa pengiriman (Boma Cargo) tidak bisa dikenakan pertanggungjawaban atas
+                                dan pihak penyedia jasa pengiriman ({{ config('app.name') }}) tidak bisa dikenakan
+                                pertanggungjawaban atas
                                 kejadian tersebut.
                             </div>
                         </div>

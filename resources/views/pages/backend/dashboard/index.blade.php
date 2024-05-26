@@ -66,6 +66,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-briefcase text-dark fs-1 mb-4"></i>
+                            <h6 class="text-muted font-semibold">Order Corporate</h6>
+                            <h6 class="font-extrabold mb-0">{{ $orderCorporate }}</h6>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </div>

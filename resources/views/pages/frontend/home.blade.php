@@ -186,6 +186,74 @@
             </div>
         </div>
     </section>
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-4">
+                    <h2 class="fw-bold text-ajl-secondary mb-3">Our Blog</h2>
+                    <p>Blog Kami Memberikan Informasi Mengenai Layanan Kami</p>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="card shadow-sm rounded-0">
+                        <div class="row g-0">
+                            <div class="col-lg-4 bg-home"
+                                style="background-image: url('{{ asset('frontend/assets/gudang.png') }}'); height: 300px;">
+                            </div>
+
+                            <div class="col-lg-8">
+                                <div class="p-3">
+                                    <h5 class="fw-bold text-dark mb-3">Logistik dan Rantai Pasok Halal</h5>
+                                    <div class="mb-2 d-flex align-items-center text-muted small">
+                                        <i class="bi bi-calendar-date me-3"></i>
+                                        <small>28 Februari 2024</small>
+                                    </div>
+                                    <div class="mb-2 d-flex align-items-center text-muted small">
+                                        <i class="bi bi-person me-3"></i>
+                                        <small> Arkan Muhammad Faizulhaq</small>
+                                    </div>
+                                    <p class="card-text">Peningkatan tren permintaan terhadap halal produk membuat logistik
+                                        halal
+                                        diimplementasikan oleh banyak negara seperti Indonesia. Halal dalam konteks logistik
+                                        memiliki beberapa tahapan dalam implementasinya</p>
+                                    <a href="https://supplychainindonesia.com/logistik-dan-rantai-pasok-halal/"
+                                        class="text-ajl-primary fw-semibold">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3">
+                    <div class="card shadow-sm rounded-0">
+                        <div class="row g-0">
+                            <div class="col-lg-4 bg-home"
+                                style="background-image: url('{{ asset('frontend/assets/fuso-box.png') }}'); height: 300px;">
+                            </div>
+                            <div class="col-lg-8">
+                                <div class="p-3">
+                                    <h5 class="fw-bold text-dark mb-3">Dukungan Jasa Logistik dalam Jaminan Produk Halal
+                                    </h5>
+                                    <div class="mb-2 d-flex align-items-center text-muted small">
+                                        <i class="bi bi-calendar-date me-3"></i>
+                                        <small>11 Juli 2023</small>
+                                    </div>
+                                    <div class="mb-2 d-flex align-items-center text-muted small">
+                                        <i class="bi bi-person me-3"></i>
+                                        <small> Yana</small>
+                                    </div>
+                                    <p class="card-text">Jasa logistik termasuk jasa yang ikut bertanggung jawab dalam
+                                        mengendalikan kegiatan penyimpanan, transportasi, dan pendistribusian di luar
+                                        pabrikan.</p>
+                                    <a href="https://halalmui.org/dukungan-jasa-logistik-dalam-jaminan-produk-halal/"
+                                        class="text-ajl-primary fw-semibold">Lihat Selengkapnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 @endsection
 
 @push('scripts')

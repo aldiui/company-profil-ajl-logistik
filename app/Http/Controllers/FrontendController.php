@@ -69,7 +69,7 @@ class FrontendController extends Controller
 
     public function galery(Request $request)
     {
-        $galeries = Galery::paginate(12);
+        $galeries = Galery::orderByDesc('created_at')->paginate(12);
 
         if ($request->ajax()) {
             return view('pages.frontend.galery-pagination', compact('galeries'))->render();
@@ -80,7 +80,7 @@ class FrontendController extends Controller
 
     public function video(Request $request)
     {
-        $videos = Video::paginate(10);
+        $videos = Video::orderByDesc('created_at')->paginate(10);
 
         if ($request->ajax()) {
             return view('pages.frontend.video-pagination', compact('videos'))->render();

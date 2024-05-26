@@ -9,10 +9,11 @@
 @section('main')
     <header class="py-5 min-vh-100">
         <div class="container">
-            <div class="row justify-content-center flex-column-reverse flex-lg-row">
-                <div class="col-lg-6 mb-3 text-center text-lg-start">
-                    <h2 class="fw-bold text-white text-ajl-secondary mb-3">@yield('title')</h2>
-                    <p>Untuk para pelanggan corporate yang ingin pembayaran lebih fleksibel (TOP ataupun tempo) silahkan isi
+            <div class="row justify-content-center align-items-center flex-column-reverse flex-lg-row">
+                <div class="col-lg-6 mb-3 ">
+                    <h2 class="fw-bold text-white text-ajl-secondary mb-3 text-center text-lg-start">@yield('title')</h2>
+                    <p class="text-center text-lg-start">Untuk para pelanggan corporate yang ingin pembayaran lebih fleksibel
+                        (TOP ataupun tempo) silahkan isi
                         form berikut ini atau hubungi 082281018776 (Customer Corporate)</p>
 
                     <form id="orderCorporate" class="my-4">
@@ -57,7 +58,7 @@
                                 <div class="form-group mb-3">
                                     <label for="alamat_kantor" class="form-label">Alamat Kantor <span
                                             class="text-danger">*</span></label>
-                                    <textarea type="text" class="form-control" id="alamat_kantor" name="alamat_kantor"></textarea>
+                                    <textarea type="text" class="form-control" id="alamat_kantor" name="alamat_kantor" placeholder="Masukan Alamat Kantor"></textarea>
                                     <small class="invalid-feedback" id="erroralamat_kantor"></small>
                                 </div>
                             </div>

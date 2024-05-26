@@ -1,16 +1,17 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
-use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\Backend\CityController;
-use App\Http\Controllers\Backend\VideoController;
-use App\Http\Controllers\Backend\GaleryController;
 use App\Http\Controllers\Backend\DashboardController;
+use App\Http\Controllers\Backend\DistributionCenterController;
+use App\Http\Controllers\Backend\GaleryController;
+use App\Http\Controllers\Backend\OrderCorporateController;
 use App\Http\Controllers\Backend\RetailPriceController;
 use App\Http\Controllers\Backend\TruckingPriceController;
-use App\Http\Controllers\Backend\OrderCorporateController;
-use App\Http\Controllers\Backend\DistributionCenterController;
+use App\Http\Controllers\Backend\VideoController;
+use App\Http\Controllers\FrontendController;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'index']);
 Route::get('layanan', [FrontendController::class, 'layanan']);
@@ -38,4 +39,10 @@ Route::prefix('admin')->middleware(['auth'])->group(function () {
     Route::resource('galery', GaleryController::class)->names('admin.galery');
     Route::resource('video', VideoController::class)->names('admin.video');
     Route::resource('order-corporate', OrderCorporateController::class)->names('admin.order-corporate');
+});
+
+Route::get('/storage-link', function () {
+    Artisan::call('storage:link');
+
+    return 'Storage link created!';
 });

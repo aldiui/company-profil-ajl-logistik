@@ -3,7 +3,7 @@
         <img src="{{ asset('storage/galery/' . $row->foto) }}" class="img-fluid custom-img mb-3"
             alt="Foto -{{ config('app.name') }}">
         <div class="mb-2 d-flex align-items-center text-muted small">
-            <i class="bi bi-linkedin  me-2"></i>
+            <i class="bi bi-calendar-date  me-2"></i>
             <span>{{ formatTanggal($row->created_at, 'd F Y') }}</span>
         </div>
         <p class="fw-semibold text-dark mb-0">{{ $row->judul }}</p>

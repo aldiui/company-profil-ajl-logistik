@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Backend;
 use App\Models\City;
 use App\Models\Video;
 use App\Models\Galery;
+use App\Models\Corporate;
 use App\Models\RetailPrice;
 use App\Models\TruckingPrice;
 use App\Models\DistributionCenter;
@@ -21,6 +22,7 @@ class DashboardController extends Controller
             'hargaTrucking' => TruckingPrice::count(),
             'galery' => Galery::count(),
             'video' => Video::count(),
+            'orderCorporate' => Corporate::count(),
         ]);
     }
 }

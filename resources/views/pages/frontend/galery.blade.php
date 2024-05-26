@@ -1,3 +1,4 @@
+
 @extends('layouts.frontend')
 
 @section('title', 'Galery')
