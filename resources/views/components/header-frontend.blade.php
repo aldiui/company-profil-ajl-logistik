@@ -11,7 +11,7 @@
             <span class="toggler-icon bottom-bar"></span>
         </button>
         <div class="collapse navbar-collapse collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder me-lg-auto">
                 <li class="nav-item">
                     <a class="nav-link ms-lg-3 text-center text-lg-start {{ Request::is('/') ? 'text-ajl-secondary fw-bold border-bottom border-ajl-secondary border-3' : '' }}"
                         href="/">Home</a>
@@ -49,6 +49,9 @@
                         href="/order-corporate">Order Corporate</a>
                 </li>
             </ul>
+            <div class="text-center">
+                <a href="/login" class="btn bg-ajl-secondary boder-0 text-white fw-semibold shadow-0 btn-sm px-3 text-center">Login</a>
+            </div>
         </div>
     </div>
 </nav>

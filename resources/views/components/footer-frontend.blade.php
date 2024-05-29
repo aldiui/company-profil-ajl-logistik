@@ -8,21 +8,28 @@
             <div class="col-lg-4 mb-3">
                 <h5 class="fw-bold text-ajl-secondary mb-3">Hubungi Kami</h5>
                 <div class="text-white list-group">
-                    <div class="mb-2 d-flex align-items-center">
-                        <i class="bi bi-instagram  me-3"></i>
+                    <a href="https://www.linkedin.com/company/ajl-logistikindonesia/"
+                        class="mb-2 d-flex align-items-center text-decoration-none text-white">
+                        <img src="{{ asset('frontend/assets/linkedin.svg') }}" width="16px" class="me-3"
+                            alt="icon linkedin">
+                        <span>PT. AJL Logistik Indonesia</span>
+                    </a>
+                    <a href="https://www.instagram.com/ajllogistikindonesia/"
+                        class="mb-2 d-flex align-items-center text-decoration-none text-white">
+                        <img src="{{ asset('frontend/assets/instagram.svg') }}" width="16px" class="me-3"
+                            alt="icon instagram">
                         <span>@ajllogistikindonesia</span>
-                    </div>
-                    <div class="mb-2 d-flex align-items-center">
-                        <i class="bi bi-linkedin  me-3"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100090841991361&mibextid=ZbWKwL
+                    "
+                        class="mb-2 d-flex align-items-center text-decoration-none text-white">
+                        <img src="{{ asset('frontend/assets/facebook.svg') }}" width="16px" class="me-3"
+                            alt="icon facebook">
                         <span>PT. AJL Logistik Indonesia</span>
-                    </div>
+                    </a>
                     <div class="mb-2 d-flex align-items-center">
-                        <i class="bi bi-facebook  me-3"></i>
-                        <span>PT. AJL Logistik Indonesia</span>
-                    </div>
-                    <div class="mb-2 d-flex align-items-center">
-                        <i class="bi bi-mailbox  me-3"></i>
-                        <span>info@ajl-logistik.com</span>
+                        <i class="bi bi-envelope-fill  me-3"></i>
+                        <span>info@ajllogistik.com</span>
                     </div>
                 </div>
             </div>
@@ -30,17 +37,14 @@
                 <h5 class="fw-bold text-ajl-secondary mb-3">Kantor</h5>
                 <div class="text-white list-group">
                     <div class="mb-2 d-flex align-items-start">
-                        <i class="bi bi-geo-alt  me-3"></i>
+                        <i class="bi bi-geo-alt-fill  me-3"></i>
                         <span>Ruko Ifolia Blok HY 47, Kota Harapan Indah No.45, Pusaka Rakyat, Kec. Tarumajaya,
                             Kabupaten Bekasi, Jawa Barat 17214</span>
                     </div>
                     <div class="mb-2 d-flex align-items-center">
-                        <i class="bi bi-telephone  me-3"></i>
-                        <span> (021) 89444706</span>
-                    </div>
-                    <div class="mb-2 d-flex align-items-center">
-                        <i class="bi bi-whatsapp me-3"></i>
-                        <span>(+62) 852-1142-2860 </span>
+                        <img src="{{ asset('frontend/assets/whatsapp.svg') }}" width="16px" class="me-3"
+                            alt="icon whatsapp">
+                        <span>+62 812-1232-6177 </span>
                     </div>
                 </div>
             </div>
@@ -58,13 +62,10 @@
                 </div>
                 <div class="d-flex flex-column flex-lg-row text-center text-lg-start gap-2">
                     <div>
-                        +6221 2244 4601
+                        +62 812-1232-6177
                     </div>
                     <div>
-                        +62 8121 2326 177
-                    </div>
-                    <div>
-                        marketing@ajl-logistik.com
+                        marketing@ajllogistik.com
                     </div>
                 </div>
             </div>

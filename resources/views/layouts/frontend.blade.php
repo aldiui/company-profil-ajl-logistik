@@ -26,9 +26,10 @@
 <body id="#">
     <div id="arrowButton" class="me-lg-5 visible">
         <div class="d-flex flex-column gap-2">
-            <a href="https://api.whatsapp.com/send?phone=6282281018776&text=Salam%20PT.%20AJL%20Logistik%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pengiriman%20barang.%20Terima%20kasih."
-                class="btn btn-success btn-lg rounded-pill">
-                <i class="bi bi-whatsapp fw-bold fs-2"></i>
+            <a
+                href="https://api.whatsapp.com/send?phone=6282281018776&text=Salam%20PT.%20AJL%20Logistik%2C%20saya%20ingin%20berkonsultasi%20mengenai%20pengiriman%20barang.%20Terima%20kasih.">
+                <img src="{{ asset('frontend/assets/whatsapp.svg') }}" width="50px"
+                    alt="icon whatsapp">
             </a>
             <div class="text-center">
                 <a href="#" class="btn btn-light bg-white shadow-none border-ajl-secondary">
